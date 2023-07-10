@@ -1,0 +1,14 @@
+import datetime
+
+tasks = {}
+
+def start_task(task_name):
+    tasks[task_name] = datetime.datetime.now()
+    print(f"任务'{task_name}'已开始.")
+
+def end_task(task_name):
+    if task_name in tasks:
+        start_time = tasks[task_name]
+        end_time = datetime.datetime.now()
+        time_elapsed = end_time - start_time
+        print(f"任务'{task_name}'已结
